@@ -182,6 +182,13 @@
     .reviews-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
     .reviews-link h3{font-size:24px;line-height:1.2}
     .reviews-link a{font-size:16px;color:#a8430a;text-underline-offset:4px}
+    .reviews-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+    .review-card{min-width:0;margin:0;padding:24px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column}
+    .review-stars{color:#a8430a;font-size:20px;letter-spacing:2px;margin-bottom:14px}
+    .review-card blockquote{font-size:16px;line-height:1.7;color:var(--ink-2);margin:0 0 24px;flex:1}
+    .review-card figcaption{font-size:16px;line-height:1.5;font-weight:700}
+    .review-source{display:block;font-size:14px;color:var(--muted);font-weight:400;margin-top:3px}
+    @media(min-width:920px){.reviews-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     .primary-cta:hover,.primary-cta:focus-visible{transform:translateY(-2px);box-shadow:none}
     .btn,.floating-wa{color:#151515}
     .btn.alt{color:#fff}
@@ -348,8 +355,25 @@
         </div>
         <iframe class="map-frame" title="Localização da MT Despachante em Tramandaí" src="https://www.google.com/maps?q=-29.9998762,-50.1523276&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         <div class="reviews-link" id="avaliacoes">
-          <h3>Quem já foi atendido pela MT</h3>
+          <h3 id="avaliacoes-titulo">Quem já foi atendido pela MT</h3>
           <a href="https://maps.app.goo.gl/uSCudC7tn37gpxig8" target="_blank" rel="noopener">Ver avaliações no Google Maps</a>
+        </div>
+        <div class="reviews-grid" role="group" aria-labelledby="avaliacoes-titulo">
+          <figure class="review-card">
+            <p class="review-stars" aria-label="5 de 5 estrelas"><span aria-hidden="true">★★★★★</span></p>
+            <blockquote><p>“Atendimento humanizado e com muito respaldo de quem realmente entende oque faz ...”</p></blockquote>
+            <figcaption>Jonatas Reis<span class="review-source">Trecho de avaliação no Google</span></figcaption>
+          </figure>
+          <figure class="review-card">
+            <p class="review-stars" aria-label="5 de 5 estrelas"><span aria-hidden="true">★★★★★</span></p>
+            <blockquote><p>“Resolveram minha demanda mais rápido do que eu imaginava. Atendimento humanizado. Voltaria a fazer serviços com certeza. Ótimo escritório.”</p></blockquote>
+            <figcaption>Rafael Bandeira<span class="review-source">Avaliação no Google</span></figcaption>
+          </figure>
+          <figure class="review-card">
+            <p class="review-stars" aria-label="5 de 5 estrelas"><span aria-hidden="true">★★★★★</span></p>
+            <blockquote><p>“Comprometidos em resolver o problema do cliente com agilidade e eficiência! Além do atendimento que é nota 1000!”</p></blockquote>
+            <figcaption>Willian Ritter coelho<span class="review-source">Avaliação no Google</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
